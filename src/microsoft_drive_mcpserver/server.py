@@ -47,7 +47,7 @@ async def delete_file(item_id: Annotated[str, Field(description="The ID of the f
 
 
 # rename file
-@mcp.tool(description="Rename a file or a folder  in Microsoft Drive.")
+@mcp.tool(description="Rename a file or a folder in Microsoft OneDrive.")
 async def file_rename(
         item_id: Annotated[str, Field(description="The ID of the file to rename.")],
         new_name: Annotated[str, Field(description="The new name for the file.")],
@@ -59,7 +59,7 @@ async def file_rename(
 
 
 # create share link
-@mcp.tool(description="Create a share link for drive item in Microsoft Drive.")
+@mcp.tool(description="Create a share link for drive item in Microsoft OneDrive.")
 async def create_share_link(
         item_id: Annotated[str, Field(description="The ID of the file to share.")],
         type_: Annotated[Literal["view", "edit", "embed"], Field(description="The type of sharing link to create.")],
@@ -81,7 +81,7 @@ async def create_share_link(
         return {"status": "error", "message": str(e)}
 
 
-@mcp.tool(description="Get a short-lived embeddable preview link for a file in Microsoft Drive.")
+@mcp.tool(description="Get a short-lived embeddable preview link for a file in Microsoft OneDrive.")
 async def preview_item(
         item_id: Annotated[str, Field(description="The ID of the file to preview.")],
         page: Annotated[Optional[Union[str, int]], Field(description="Page number of document to start at, if applicable. Specified as string for future use cases around file types such as ZIP.")] = None,
@@ -94,7 +94,7 @@ async def preview_item(
 
 
 # list children of a folder
-@mcp.tool(description="List children of a drive item in Microsoft Drive.")
+@mcp.tool(description="List children of a drive item in Microsoft OneDrive.")
 async def list_children(
         item_id: Annotated[str, Field(description="The ID of the item to list children for.")],
         next_link: Annotated[Optional[str], Field(description="Next page link for pagination.")] = None
@@ -106,7 +106,7 @@ async def list_children(
 
 
 # download file content
-@mcp.tool(description="Download content of a file in Microsoft Drive.")
+@mcp.tool(description="Download content of a file in Microsoft OneDrive.")
 async def get_file_content(
         item_id: Annotated[str, Field(description="The ID of the file to download content for.")]
 ) -> dict:
@@ -117,7 +117,7 @@ async def get_file_content(
 
 
 # folder_create
-@mcp.tool(description="Create a folder in Microsoft Drive.")
+@mcp.tool(description="Create a folder in Microsoft OneDrive.")
 async def folder_create(
         name: Annotated[str, Field(description="The name of the folder to create.")],
         parent_item_id: Annotated[Optional[str], Field(description="The ID of the parent folder. If not provided, the folder will be created in the root directory.")] = None
