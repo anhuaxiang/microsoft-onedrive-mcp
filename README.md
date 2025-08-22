@@ -4,6 +4,8 @@ A Model Context Protocol (MCP) server that provides access to Microsoft OneDrive
 
 
 [API DOC](https://learn.microsoft.com/en-us/graph/api/driveitem-get?view=graph-rest-1.0&tabs=http)
+[Register Application](https://portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)
+
 
 ```json
 
