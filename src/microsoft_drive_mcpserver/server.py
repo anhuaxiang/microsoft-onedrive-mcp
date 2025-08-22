@@ -14,6 +14,8 @@ MS_ACCESS_TOKEN = os.environ.get("MS_ACCESS_TOKEN")
 if not MS_ACCESS_TOKEN:
     raise ValueError("MS_ACCESS_TOKEN environment variable is required.")
 MS_REFRESH_TOKEN = os.environ.get("MS_REFRESH_TOKEN")
+if not MS_REFRESH_TOKEN:
+    raise ValueError("MS_REFRESH_TOKEN environment variable is required.")
 
 onedrive = AsyncMicrosoftOneDrive(
     client_id=MS_CLIENT_ID,

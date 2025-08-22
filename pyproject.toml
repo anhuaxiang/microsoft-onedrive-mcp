@@ -1,6 +1,6 @@
 [project]
 name = "microsoft-drive-mcpserver"
-version = "0.1.2"
+version = "0.1.3"
 description = "Microsoft Drive MCP Server"
 authors = [
     {name = "yanrujing", email = "rujing.yan@protagonist-ai.com"}
